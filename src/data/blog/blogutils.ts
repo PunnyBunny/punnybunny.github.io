@@ -2,11 +2,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const blogsDirectory = path.join(process.cwd(), "content/blogs");
+const blogsDirectory = path.join(process.cwd(), "public/content/blogs");
 
 export function getBlogSlugs() {
   return fs
     .readdirSync(blogsDirectory)
+    .filter((file) => file.endsWith(".md"))
     .map((file) => file.replace(/\.md$/, ""));
 }
 
