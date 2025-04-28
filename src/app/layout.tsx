@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Gideon_Roman } from 'next/font/google';
+import { Gideon_Roman } from "next/font/google";
 import "./globals.css";
 
 const gideonRoman = Gideon_Roman({
   weight: "400",
-  subsets: ['latin'],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -24,6 +24,6 @@ export default function RootLayout({
       >
         {children}
       </body>
-    </html >
+    </html>
   );
 }
