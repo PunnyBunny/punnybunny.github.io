@@ -2,15 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-primary: #282828;
-  --color-on-primary: #ffffff;
-  --color-surface: #505050;
-  --color-on-surface: #ffffff;
+html {
+  font-size: 24px;
 }
 
-body {
-  color: var(--surface);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    @apply bg-background text-on-background;
+  }
+  .dark body {
+    @apply bg-dark-background text-on-dark-background;
+  }
+  a {
+    @apply underline;
+    @apply hover:no-underline;
+  }
 }

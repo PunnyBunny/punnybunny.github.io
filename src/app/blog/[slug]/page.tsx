@@ -12,7 +12,7 @@ const Blog: React.FC<BlogProps> = async ({ params }) => {
   const blogHtml = micromark(blog.content);
   return (
     <div className="p-10 flex flex-col gap-4 min-h-screen">
-      <div className="bg-black text-white p-4 w-fit flex flex-col">
+      <div className="bg-surface dark:bg-dark-surface text-on-surface dark:text-on-dark-surface p-4 w-fit flex flex-col">
         <h1 className="text-7xl font-bold">{blog.title}</h1>
         <p>{blog.date}</p>
       </div>

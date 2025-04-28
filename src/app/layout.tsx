@@ -3,6 +3,7 @@ import { Gideon_Roman } from "next/font/google";
 import "./globals.css";
 import AppBar from "./appbar";
 import ContactsBar from "./contactsbar";
+import { ThemeProvider } from "next-themes";
 
 const gideonRoman = Gideon_Roman({
   weight: "400",
@@ -10,7 +11,7 @@ const gideonRoman = Gideon_Roman({
 });
 
 export const metadata: Metadata = {
-  title: "sunny",
+  title: "sunny cheung",
   description: "my personal website",
 };
 
@@ -24,9 +25,11 @@ export default function RootLayout({
       <body
         className={`${gideonRoman.className} antialiased scroll-smooth flex flex-col`}
       >
-        <AppBar />
-        {children}
-        <ContactsBar />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <AppBar />
+          {children}
+          <ContactsBar />
+        </ThemeProvider>
       </body>
     </html>
   );
