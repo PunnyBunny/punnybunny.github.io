@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Gideon_Roman } from "next/font/google";
 import "./globals.css";
+import AppBar from "./appbar";
+import ContactsBar from "./contactsbar";
 
 const gideonRoman = Gideon_Roman({
   weight: "400",
@@ -20,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gideonRoman.className} antialiased bg-black scroll-smooth`}
+        className={`${gideonRoman.className} antialiased scroll-smooth flex flex-col`}
       >
+        <AppBar />
         {children}
+        <ContactsBar />
       </body>
     </html>
   );
