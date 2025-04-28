@@ -1,4 +1,5 @@
 import { getBlogBySlug, getBlogSlugs } from "@/data/blog/blogutils";
+import { micromark } from "micromark";
 
 interface BlogProps {
   params: Promise<{ slug: string }>;
@@ -7,13 +8,23 @@ interface BlogProps {
 const Blog: React.FC<BlogProps> = async ({ params }) => {
   const { slug } = await params;
   const blog = getBlogBySlug(slug);
+
+  const blogHtml = micromark(blog.content);
   return (
     <div className="p-10 flex flex-col gap-4 min-h-screen">
-      <div className="bg-black text-white p-4 w-fit">
+      <div className="bg-black text-white p-4 w-fit flex flex-col">
         <h1 className="text-7xl font-bold">{blog.title}</h1>
         <p>{blog.date}</p>
       </div>
-      <div className="prose max-w-none">{blog.content}</div>
+      <div className="relative my-4">
+        <div className="absolute text-8xl -top-2 -left-3 opacity-20">“</div>
+        <blockquote>
+          <h2 className="text-4xl italic">{blog.description}</h2>
+        </blockquote>
+      </div>
+      <div className="max-w-none">
+        <div dangerouslySetInnerHTML={{ __html: blogHtml }} />
+      </div>
     </div>
   );
 };
