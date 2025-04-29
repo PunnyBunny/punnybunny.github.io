@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Page: React.FC = () => {
   return (
-    <div className="p-10 flex flex-col gap-4">
+    <div className="p-10 flex flex-col gap-4 overflow-x-hidden">
       <div>
         <div className="bg-surface dark:bg-dark-surface text-on-surface dark:text-on-dark-surface p-4 w-fit">
           <h1 className="text-7xl font-bold">hi, i&apos;m sunny.</h1>
