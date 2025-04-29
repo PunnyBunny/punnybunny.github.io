@@ -27,7 +27,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <AppBar />
-          {children}
+          <div className=" max-w-screen-xl mx-auto">{children}</div>
           <ContactsBar />
         </ThemeProvider>
       </body>
