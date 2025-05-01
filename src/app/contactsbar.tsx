@@ -52,16 +52,24 @@ const LinkedInIcon = () => (
 );
 const ContactsBar: React.FC = () => {
   return (
-    <div className="w-full h-10 bg-surface dark:bg-dark-surface text-on-surface dark:text-on-dark-surface text-center py-2 text-sm">
+    <div className="w-full h-fit bg-surface dark:bg-dark-surface text-on-surface dark:text-on-dark-surface text-center p-2 text-sm">
       <p>
         Contact:{" "}
-        <a href="mailto:sunnycheungabc@gmail.com">sunnycheungabc@gmail.com</a> |
-        +44 (0)7587 431089 |{" "}
-        <a href="https://www.instagram.com/punny_bunny_/">
+        <a href="mailto:sunnycheungabc@gmail.com" className="inline-block">
+          sunnycheungabc@gmail.com
+        </a>{" "}
+        | <span className="inline-block">+44 (0)7587 431089</span> |{" "}
+        <a
+          href="https://www.instagram.com/punny_bunny_/"
+          className="inline-block"
+        >
           <InstagramIcon />
         </a>{" "}
         |{" "}
-        <a href="https://www.linkedin.com/in/sunny-cheung-91b299232/">
+        <a
+          href="https://www.linkedin.com/in/sunny-cheung-91b299232/"
+          className="inline-block"
+        >
           <LinkedInIcon />
         </a>{" "}
       </p>
