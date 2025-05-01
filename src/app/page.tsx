@@ -1,14 +1,15 @@
 import Image from "next/image";
 import fryegg from "../../public/images/fryegg.jpg";
 import Link from "next/link";
+import FiveDotsSeparator from "@/components/FiveDotsSeparator";
 
 const Page: React.FC = () => {
   return (
-    <div className="p-10 flex flex-col gap-4 overflow-x-hidden">
-      <div>
-        <div className="bg-surface dark:bg-dark-surface text-on-surface dark:text-on-dark-surface p-4 w-fit">
-          <h1 className="text-7xl font-bold">hi, i&apos;m sunny.</h1>
-        </div>
+    <div className="p-5 md:p-10 flex flex-col gap-4 overflow-x-hidden">
+      <div className="bg-surface dark:bg-dark-surface p-4 w-fit">
+        <h1 className="text-3xl md:text-5xl font-bold text-on-surface dark:text-on-dark-surface">
+          hi, i&apos;m sunny.
+        </h1>
       </div>
       <div className="flex flex-row">
         <div className="bg-surface dark:bg-dark-surface p-2 w-min" />
@@ -45,10 +46,9 @@ const Page: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="-mx-96 my-10 h-4 bg-[repeating-linear-gradient(to_right,transparent_0,transparent_30px,black_30px,black_120px,transparent_120px,transparent_150px,black_150px,black_180px)]"></div>
-
+      <FiveDotsSeparator />
       <div className="bg-surface dark:bg-dark-surface text-on-surface dark:text-on-dark-surface p-2 w-fit">
-        <h1 className="text-2xl font-bold">projects</h1>
+        <h1 className="text-3xl font-bold">projects</h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="border-8 border-surface dark:border-dark-surface p-2 h-min w-fit">
@@ -66,6 +66,7 @@ const Page: React.FC = () => {
           </p>
         </div>
       </div>
+      <FiveDotsSeparator />
       <div className="bg-surface dark:bg-dark-surface text-on-surface dark:text-on-dark-surface p-4 mx-auto">
         <Link href="/blog">
           <h1 className="text-7xl font-bold">blog</h1>

@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`antialiased scroll-smooth flex flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <AppBar />
-          <div className=" max-w-screen-xl mx-auto">{children}</div>
+          <div className="max-w-screen-xl mx-auto">{children}</div>
           <ContactsBar />
         </ThemeProvider>
       </body>
