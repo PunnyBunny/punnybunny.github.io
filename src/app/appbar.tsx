@@ -106,7 +106,7 @@ const AppBar: React.FC = () => {
           </div>
 
           <div
-            className={`fixed top-16 left-0 bottom-0 w-full bg-surface dark:bg-dark-surface flex flex-col gap-4 items-center justify-center md:hidden transition-all duration-500 ease-in-out ${isMenuOpen ? "opacity-100 rotate-0" : " opacity-0 rotate-180"}`}
+            className={`fixed top-16 left-0 bottom-0 w-full bg-surface dark:bg-dark-surface flex flex-col gap-4 items-center justify-center md:hidden transition-all duration-500 ease-in-out ${!isMenuOpen ? "opacity-0 rotate-180 -z-50" : " opacity-100 rotate-0 z-50"}`}
           >
             {navigationItems}
           </div>
