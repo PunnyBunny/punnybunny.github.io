@@ -87,7 +87,7 @@ const AppBar: React.FC = () => {
               <div className="flex items-center gap-4">
                 <h1 className="text-xl">
                   <span className="font-bold">sunny</span>
-                  chenug
+                  cheung
                 </h1>
               </div>
             </Link>
